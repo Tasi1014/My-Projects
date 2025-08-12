@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(AdobeStock_254186745_Preview.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    display: inline;
+}
+
+.button{
+   
+    display:grid ;
+    grid-template-columns: repeat(auto-fit, minmax(min(20vw, 5rem), 1fr)); /* grid template is used to specify the size of column for the grid
+    we made it responsive using auto-fit and minmax...min has two parameters one is 20% of viewwidth and another is 5rem..in any device after
+    calculating both of these things whichever is minimum that value will be the column size making it responsive */
+    gap: clamp(0.2rem, 1vw, 0.5rem); /* here clamp function in css has three parameters (min, preferred , max) in any device
+    whichever of these 3 parameters are smaller that value will be set as the gap...at first the specified percentage
+    of the viwwidth will be calculated..as it is prefered size of the gap if it is not samaller than min size and not greater than
+    max size than the specified percentage of the viewwidth will be set as size of gap otherwise if it is smaller than tha size of the min
+    the min value will be used i.e 0.2rem in this case..the min value acts as the minimum bound of size...similarly if the preferred size is greater than the max size
+    than the max size value will be used which is 0.5rem in this case.  */
+    padding: clamp(0.3rem, 2vw, 1rem);
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+     height: auto;
+     width: 90vw;
+     max-width: 450px; /* here width 90vm means the width will be 90% of the viewwidth but it will not
+     exceed 450px */
+
+    border: 1px solid black;
+     box-shadow: 0 0 10px white;
+      border: 2px solid white;
+     border-radius: 0.7rem;
+     background-color: black;
+}
+.num{
+    /* height: 5rem;
+    width: 5rem; */
+    width: clamp(3rem, 20vw, 5rem);
+    height: clamp(3rem, 20vw, 5rem);
+
+    background-color: #353839;
+    color: white;
+    font-weight: bolder;
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    border: 1px solid black;
+    margin: 0.7rem;
+    margin: clamp(0.2rem, 1vw, 0.6rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container
+{
+    width: 100vw;
+    height: 100VH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+input{
+    width: calc(100% - 16px);
+    height: clamp(3rem, 8vw, 5rem);
+
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 8px;
+     box-shadow: 0 0 5px white ;
+     background-color: black;
+     color: white;
+     /* font-size: 4rem; */
+     font-size: clamp(2rem, 8vw, 4rem);
+
+     font-weight: bolder;
+     text-align: right;
+
+}
+
+.operator{
+    background-color:#FFD500;
+    color: black;
+}
+
+
+.num:hover{
+    background-color: #00719c;
+    transition: 0.2s;
+}
+
+.num:active{
+    background-color: darkgray ;
+}
+
+
+.style{
+    background-color: #A7A7A7;
+}
+
+.del{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+        <input type="display" id="display" readonly>
+        <div class="button">
+        <button class="num " onclick="appendToScreen('1')">1</button>
+        <button class="num" onclick="appendToScreen('2')">2</button>
+        <button class="num" onclick="appendToScreen('3')">3</button>
+        <button class="num operator" onclick="appendToScreen('+')" >+</button>
+        <button class="num" onclick="appendToScreen('4')">4</button>
+        <button class="num" onclick="appendToScreen('5')">5</button>
+        <button class="num"onclick="appendToScreen('6')">6</button>
+        <button class="num operator" onclick="appendToScreen('-')"  >-</button>
+        <button class="num" onclick="appendToScreen('7')">7</button>
+        <button class="num" onclick="appendToScreen('8')">8</button>
+        <button class="num" onclick="appendToScreen('9')">9</button>
+        <button class="num operator" onclick="appendToScreen('*')">*</button>
+        <button class="num" onclick="appendToScreen('0')">0</button>
+        <button class="num" onclick="appendToScreen('.')" >.</button>
+        <button class="num operator" onclick="appendToScreen('/')">/</button>
+        <button class="num operator" onclick="calculateExpression()">=</button>
+        <button class="num style" onclick="clearScreen()">C</button>
+        <button class="num style" onclick="appendToScreen('%')">%</button>
+        <button class="num style del" onclick="deleteExpression()"  >del</button>
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
